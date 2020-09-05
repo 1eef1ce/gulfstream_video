@@ -1,0 +1,1535 @@
+fontRegular = MontserratRegular
+fontMedium = MontserratMedium
+fontBold = MontserratBold
+fontSemiBold = MontserratSemiBold
+fontLight = MontserratLight
+fontAlt = RobotoRegular
+fontRouble = PTRoubleSans
+
+colorWhite = #ffffff
+colorLight = #f2f2f2
+colorGrey = #54616c
+colorLightGrey = #969696
+colorRed = #ef4129
+colorBlue = #201b57
+
+md = 768px
+xl = 1200px
+
+@font-face
+  font-family MontserratRegular
+  src url("../assets/fonts/Montserrat-Regular.woff2") format('woff2'),
+  url("../assets/fonts/Montserrat-Regular.woff") format('woff')
+
+@font-face
+  font-family MontserratMedium
+  src url("../assets/fonts/Montserrat-Medium.woff2") format('woff2'),
+  url("../assets/fonts/Montserrat-Medium.woff") format('woff')
+
+@font-face
+  font-family MontserratBold
+  src url("../assets/fonts/Montserrat-Bold.woff2") format('woff2'),
+  url("../assets/fonts/Montserrat-Bold.woff") format('woff')
+
+@font-face
+  font-family MontserratSemiBold
+  src url("../assets/fonts/Montserrat-SemiBold.woff2") format('woff2'),
+  url("../assets/fonts/Montserrat-SemiBold.woff") format('woff')
+
+@font-face
+  font-family MontserratLight
+  src url("../assets/fonts/Montserrat-Light.woff2") format('woff2'),
+  url("../assets/fonts/Montserrat-Light.woff") format('woff')
+
+@font-face
+  font-family RobotoRegular
+  src url("../assets/fonts/Roboto.woff2") format('woff2'),
+  url("../assets/fonts/Roboto.woff") format('woff')
+
+@font-face
+  font-family PTRoubleSans
+  src url("../assets/fonts/RUBSN.woff2") format('woff2'),
+  url("../assets/fonts/RUBSN.woff") format('woff')
+
+//outline fix
+input
+textarea
+  resize none
+  &:focus
+    box-shadow none!important
+
+button
+a
+  display inline-block
+  color inherit
+  text-decoration none
+  &:hover
+  &:focus
+    outline none
+    box-shadow none
+    color inherit
+    text-decoration none
+
+button
+  padding 0
+  border 0
+
+ul
+  list-style none
+  padding 0
+  margin 0
+
+p
+  &:last-of-type
+    margin-bottom 0
+
+//bootstrap macOs fix
+.row
+  &:before
+  &:after
+    display inline-block !important
+    content normal
+
+//** General **//
+body
+  display flex
+  flex-direction column
+  font-family fontMedium, Arial, sans-serif
+  font-size 14px
+  color colorGrey
+  line-height 1.2
+  background-color colorWhite
+
+  @media (min-width xl)
+    font-size 16px
+
+img
+  max-width 100%
+  max-height 100%
+
+.container
+  padding 0 15px
+
+  @media (min-width md)
+    max-width 740px
+
+  @media (min-width xl)
+    max-width 1200px
+
+.row
+  margin-left -5px
+  margin-right -5px
+
+  @media (min-width md)
+    margin-left -10px
+    margin-right -10px
+
+  @media (min-width xl)
+    margin-left -15px
+    margin-right -15px
+
+.col
+[class*="col-"]
+  padding-left 5px
+  padding-right 5px
+
+  @media (min-width md)
+    padding-left 10px
+    padding-right 10px
+
+  @media (min-width xl)
+    padding-left 15px
+    padding-right 15px
+
+.section-title
+  font-family fontRegular
+  font-size 20px
+  line-height 1.2
+  color colorBlue
+  text-transform uppercase
+  text-align center
+  margin-bottom 15px
+
+  @media (min-width md)
+    font-family fontLight
+    font-size 22px
+
+  @media (min-width xl)
+    font-size 36px
+
+.text-regular
+  font-family fontMedium
+  font-size 14px
+  line-height 1.7
+  color colorGrey
+  &.center
+    text-align center
+    margin-bottom 20px
+
+  @media (min-width md)
+    font-size 12px
+    line-height 1.5
+    &.center
+      max-width 545px
+      margin 0 auto
+      margin-bottom 30px
+
+  @media (min-width xl)
+    font-size 16px
+    &.center
+      max-width 840px
+
+//** Links and buttons **//
+.btn
+  display flex
+  align-items center
+  justify-content center
+  width 153px
+  height 32px
+  font-family fontAlt
+  font-size 14px
+  line-height 1
+  color colorWhite
+  border-radius 4px
+  background colorRed
+  border 0
+  padding 0
+  &:hover
+  &:focus
+    color colorWhite
+    box-shadow none
+
+  @media (min-width md)
+    font-size 12px
+
+  @media (min-width xl)
+    width 226px
+    height 48px
+    font-size 19px
+
+//** Header **//
+header
+.header
+  position fixed
+  top 0
+  left 0
+  right 0
+  z-index 9999
+  width 100vw
+  background colorWhite
+
+.header-container
+  display flex
+  align-items center
+  justify-content space-between
+  height 50px
+
+  @media (min-width md)
+    height 60px
+
+  @media (min-width xl)
+    height 96px
+
+.navbar-toggler
+  padding 0
+  border 0
+  margin-right 23px
+
+  @media (min-width xl)
+    display none
+
+.navbar-toggler .icon-bar
+  display block
+  width 12px
+  height 1px
+  background colorBlue
+  position relative
+  transform rotate(0)
+  transform-origin left center
+  transition all 0.15s ease
+
+.navbar-toggler .icon-bar+.icon-bar
+  margin-top 3px
+
+.logo-header
+  width 116px
+
+  @media (min-width xl)
+    width 170px
+
+.nav-center
+  display none
+
+  @media (min-width xl)
+    display flex
+
+.nav-link
+  font-family fontAlt
+  font-size 15px
+  color colorBlue
+  padding 5px 15px
+  &:hover
+  &:focus
+    color colorBlue
+
+.nav-right
+  display flex
+  align-items center
+
+.btn-header
+  display none
+  color colorRed
+  background colorWhite
+  border 1px solid colorRed
+  &:hover
+  &:focus
+    color colorWhite
+    background colorRed
+
+  @media (min-width xl)
+    display flex
+    width 140px
+    height 40px
+    font-size 15px
+    margin-right 25px
+
+.header-phone
+  display flex
+  align-items center
+  font-family fontAlt
+  font-size 12px
+  color colorRed
+  &:hover
+  &:focus
+    color colorRed
+
+  @media (min-width xl)
+    font-size 15px
+
+.user-login
+  background url("../assets/images/login.png") no-repeat center
+  background-size contain
+  width 12px
+  height 12px
+  margin-left 12px
+
+  @media (min-width xl)
+    width 27px
+    height 27px
+    margin-left 40px
+
+.region
+  display none
+
+  @media (min-width xl)
+    display flex
+    align-items center
+    font-family fontAlt
+    font-size 15px
+    color #969696
+    &:hover
+    &:focus
+      color #969696
+    &:after
+      content ""
+      background url("../assets/images/arrow-down.svg")
+      width 11px
+      height 7px
+      background-size contain
+      margin-left 10px
+      transition 0.2s
+      border 0
+    &[aria-expanded='true']
+      &:after
+        transform rotate(180deg)
+
+.regions
+  position fixed
+  top 96px
+  left 0
+  right 0
+  z-index 9999
+  display flex
+  justify-content center
+  padding 29px 0 23px
+  background #ebebeb
+  ul
+    width 190px
+    li a
+      font-family fontBold
+      font-size 13px
+      color #969696
+      padding 2px 0
+      &:hover
+      &:focus
+        color colorBlue
+
+//** Top **//
+.section-top
+  margin-top 50px
+
+  @media (min-width md)
+    margin-top 60px
+
+  @media (min-width xl)
+    margin-top 96px
+
+.swiper-top
+  max-width 1440px
+  margin auto
+  height 194px
+  .swiper-slide
+    display flex
+    align-items center
+    background-repeat no-repeat
+    background-position center
+    background-size cover
+
+  @media (min-width md)
+    height 336px
+
+  @media (min-width xl)
+    height 615px
+
+.top-slide-1
+  background-image url("../assets/images/top_slide1_376.jpg")
+
+  @media (min-width md)
+    background-image url("../assets/images/top_slide1.jpg")
+
+.top-slide-2
+  background-image url("../assets/images/top_slide2_376.jpg")
+
+  @media (min-width md)
+    background-image url("../assets/images/top_slide2.jpg")
+
+.top-container
+  padding-left 35px
+
+  @media (min-width md)
+    padding-left 100px
+
+  @media (min-width xl)
+    padding-left 170px
+
+.text-top
+  font-family fontRegular
+  font-size 14px
+  line-height 1.2
+  color colorWhite
+  letter-spacing 0.01em
+  text-transform uppercase
+  margin-bottom 10px
+  span
+    font-family fontBold
+
+  @media (min-width md)
+    font-size 22px
+    margin-bottom 20px
+
+  @media (min-width xl)
+    font-size 40px
+    margin-bottom 25px
+
+.text-top-dark
+  color colorGrey
+
+.btn-top
+  width 130px
+  height 28px
+  font-size 13px
+
+  @media (min-width md)
+    width 172px
+    height 39px
+    font-family fontMedium
+    font-size 14px
+    letter-spacing 0.01em
+
+  @media (min-width xl)
+    width 309px
+    height 70px
+    font-size 24px
+
+.features
+  background colorWhite
+  padding 10px 0
+
+  @media (min-width md)
+    padding 17px 0
+
+  @media (min-width xl)
+    padding 26px 0
+
+.features-container
+  display flex
+  justify-content space-between
+  padding 0 16px
+
+  @media (min-width md)
+    padding 0 30px
+
+  @media (min-width 1440px)
+    padding 0
+    max-width 1280px
+    margin auto
+
+.feature
+  display flex
+  align-items center
+  flex-shrink 0
+  font-family fontRegular
+  font-size 10px
+  line-height 1
+
+  @media (min-width xl)
+    font-size 16px
+
+.feature-img
+  display flex
+  align-items center
+  justify-content center
+  flex-shrink 0
+  margin-right 8px
+  img
+    max-width 28px
+    max-height 28px
+
+  @media (min-width xl)
+    margin-right 13px
+    img
+      max-width 100%
+      max-height 100%
+
+//** Description **//
+.section-description
+  display none
+  background colorLight
+  padding 37px 0 25px
+
+  @media (min-width md)
+    display block
+    padding 41px 0 45px
+
+  @media (min-width xl)
+    padding 71px 0 117px
+
+.description-container
+  display flex
+  flex-direction column
+
+  @media (min-width md)
+    flex-direction row
+    align-items center
+    margin-top 36px
+
+  @media (min-width xl)
+    margin-top 80px
+
+.swiper-description
+  margin-bottom 28px
+  .swiper-slide
+    img
+      width 100%
+
+  @media (min-width md)
+    display none
+
+.description-img
+  display none
+
+  @media (min-width md)
+    display flex
+    flex-shrink 0
+    align-items center
+    justify-content center
+    width 330px
+
+  @media (min-width xl)
+    width auto
+    margin 0 46px
+
+.description-text
+  font-family fontMedium
+  font-size 12px
+  line-height 1.8
+  color colorGrey
+  text-align center
+
+  @media (min-width md)
+    line-height 1.2
+    text-align left
+    padding-left 50px
+
+  @media (min-width xl)
+    max-width 432px
+    font-size 16px
+    padding-left 0
+    margin 0 46px
+
+//** Swiper elements **//
+.nav-prev
+.nav-next
+  position absolute
+  top calc(50% - 7px)
+  z-index 100
+  background url("../assets/images/arrow.svg") no-repeat center
+  width 8px
+  height 15px
+  background-size contain
+
+  @media (min-width md)
+    width 12px
+    height 22px
+    top calc(50% - 11px)
+
+  @media (min-width xl)
+    width 17px
+    height 31px
+    top calc(50% - 15px)
+
+.nav-prev
+  transform rotate(180deg)
+  left 15px
+
+  @media (min-width md)
+    left 20px
+
+  @media (min-width xl)
+    left 50px
+
+.nav-next
+  right 15px
+
+  @media (min-width md)
+    right 20px
+
+  @media (min-width xl)
+    right 50px
+
+.pagination
+  &.swiper-pagination-bullets
+    position absolute
+    bottom 15px
+    left 0
+    right 0
+    z-index 100
+    margin auto
+    display flex
+    align-items center
+    justify-content center
+    outline none
+
+.nav-bullet
+  width 7px
+  height 7px
+  margin 0 5px
+  border-radius 100%
+  background rgba(255, 255, 255, 0.6)
+  cursor pointer
+  &:focus
+    outline none
+  &.active
+    background rgba(255, 255, 255, 0.8)
+    border-radius 100%
+    border double 5px rgba(255,255,255,0.8)
+    background-clip padding-box
+
+//** Install **//
+.section-install
+  padding-top 26px
+
+  @media (min-width md)
+    padding-top 35px
+
+  @media (min-width xl)
+    padding-top 60px
+
+.swiper-install
+  .swiper-slide
+    position relative
+    >img
+      width 100%
+
+  @media (min-width md)
+    display none
+
+#intro,#intro2
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 310px;
+  overflow: hidden;
+  cursor: pointer
+
+  @media (min-width xl)
+    height: 580px;
+
+#introover, #introover2 {
+  position: relative;
+  top: 0;
+  margin-left: 0;
+  clip-path: polygon(0% 0%,0% 110%,80% 110%,110% 0%);
+  -webkit-clip-path: polygon(0% 0%,0% 110%,80% 110%,110% 0%);
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow: hidden
+}
+
+#introover, #introover2 {
+  clip-path: url(#clipping);
+  -webkit-clip-path: url(#clipping)
+}
+
+.introoptions {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center
+}
+
+#intro-mover, #intro-mover2 {
+  position: absolute;
+  height: 100%;
+  width: 1px;
+  z-index: 2;
+  background-color: #fff;
+  top: 0;
+  cursor: e-resize
+}
+
+#introover .introover-bg, #introover2 .introover-bg2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.frame
+  position absolute
+  z-index 10
+  display flex
+  align-items center
+  justify-content center
+  img
+    width 46px
+
+  @media (min-width xl)
+    img
+      width auto
+
+.frame-inside
+  background url("../assets/images/frame_round.png") no-repeat center
+  background-size contain
+  width 80px
+  height 80px
+  left 10%
+  bottom 10%
+
+  @media (min-width md)
+    display none
+
+.frame-outside
+  background url("../assets/images/frame.png") no-repeat center
+  background-size contain
+  width 83px
+  height 80px
+  left 33%
+  bottom 33%
+
+  @media (min-width md)
+    width 86px
+    height 82px
+    left 33%
+    bottom 30%
+
+  @media (min-width xl)
+    width 159px
+    height 152px
+    left 236px
+    bottom 174px
+
+.intro-container
+  display none
+
+  @media (min-width md)
+    display flex
+    justify-content center
+
+.intro-wrapper
+  width 100%
+  max-width 720px
+
+.mover-round
+  position absolute
+  background colorWhite url("../assets/images/arrows.png") no-repeat center
+  border-radius 100%
+
+  @media (min-width md)
+    top 40%
+    left calc(100% - 13px)
+    width 25px
+    height 25px
+    background-size 16px
+
+  @media (min-width xl)
+    top 40%
+    left calc(100% - 24px)
+    width 47px
+    height 47px
+    background-size auto
+
+//** Voice **//
+.section-voice
+  padding-top 27px
+
+  @media (min-width md)
+    padding-top 37px
+
+  @media (min-width xl)
+    padding-top 69px
+
+.swiper-voice
+
+  @media (min-width md)
+    display none
+
+.voice-container
+  display none
+
+  @media (min-width md)
+    display flex
+    flex-direction row
+    justify-content center
+
+.voice-img
+  position relative
+
+.bubble
+  position absolute
+  display flex
+  align-items center
+  justify-content center
+  background url("../assets/images/bubble.png") no-repeat center
+  width 83px
+  height 83px
+  background-size contain
+  font-family fontAlt
+  font-size 15px
+  color colorGrey
+
+  @media (min-width md)
+    width 86px
+    height 86px
+    font-size 16px
+
+  @media (min-width xl)
+    width 162px
+    height 162px
+    font-size 30px
+
+.bubble-hi
+  top 10px
+  left calc(50% - 41px)
+
+  @media (min-width md)
+    top 19px
+    left calc(50% - 43px)
+
+  @media (min-width xl)
+    top 34px
+    left calc(50% - 81px)
+
+.bubble-meow
+  bottom 13px
+  right 58px
+  transform rotate(180deg)
+  span
+    transform rotate(180deg)
+
+  @media (min-width xl)
+    bottom 24px
+    right 113px
+
+//** Device **//
+.section-device
+  padding 32px 0 46px
+  background colorLight
+
+  @media (min-width md)
+    padding 50px 0 62px
+    background colorWhite
+
+  @media (min-width xl)
+    padding 112px 0 130px
+
+.device-img
+  display flex
+  align-items center
+  justify-content center
+  margin-bottom 40px
+
+  @media (min-width md)
+    margin-bottom 0
+    margin-top -40px
+
+  @media (min-width xl)
+    width 100%
+    margin-top -100px
+
+.specs-container
+
+  @media (min-width md)
+    margin-top 25px
+
+  @media (min-width xl)
+    padding 0
+
+.spec
+  display flex
+  &+.spec
+    margin-top 16px
+
+  @media (min-width md)
+    &+.spec
+      margin-top 8px
+
+  @media (min-width xl)
+    &+.spec
+      margin-top 28px
+
+.spec-img
+  display flex
+  align-items center
+  justify-content center
+  flex-shrink 0
+  width 30px
+  height auto
+  margin-right 10px
+  img
+    max-width 26px
+    max-height 26px
+
+  @media (min-width xl)
+    width 46px
+    margin-right 35px
+    img
+      max-width 100%
+      max-height 100%
+
+.spec-text
+  font-family fontMedium
+  font-size 11px
+  line-height 1.8
+  color colorGrey
+
+  @media (min-width md)
+    font-size 10px
+    line-height 1.5
+
+  @media (min-width xl)
+    font-size 16px
+    line-height 1.2
+
+.divider
+  width 72px
+  height 1px
+  background colorGrey
+  margin 35px auto 45px
+
+  @media (min-width md)
+    display none
+
+.device-prices
+  display flex
+  margin 26px 0 0 45px
+
+  @media (min-width xl)
+    margin 72px 0 0 81px
+
+.price-block
+  display flex
+  flex-direction column
+  justify-content space-between
+  width 50%
+
+.price-text
+  font-family fontSemiBold
+  font-size 12px
+  line-height 1.67
+  color colorGrey
+  margin-bottom 7px
+
+  @media (min-width md)
+    font-family fontMedium
+
+  @media (min-width xl)
+    font-size 18px
+
+.price-old
+  font-family fontRegular
+  font-size 22px
+  color colorGrey
+
+  @media (min-width xl)
+    font-size 36px
+
+.price-new
+  font-family fontRegular
+  font-size 22px
+  color colorRed
+  text-decoration underline
+
+  @media (min-width xl)
+    font-size 36px
+
+//** Tariffs **//
+.section-tariffs
+  background colorLight
+  padding 30px 15px 53px
+
+  @media (min-width xl)
+    padding 35px 0 60px
+
+  @media (min-width xl)
+    padding 54px 0 155px
+
+.tariffs
+  display flex
+
+.tariff
+  display flex
+  flex-direction column
+  width 100%
+  height 100%
+  background colorWhite
+  padding 36px 12px 22px
+  border-radius 20px
+  box-shadow 0 0 60px rgba(44, 85, 162, 0.15)
+
+  @media (min-width md)
+    max-width 428px
+    margin 0 auto
+    padding 26px 20px 28px
+
+  @media (min-width xl)
+    padding 52px 19px 32px
+
+.tariff-inactive
+  opacity 0.4
+
+.tariff-title
+  font-family fontRegular
+  font-size 23px
+  text-align center
+  margin-bottom 52px
+
+  @media (min-width md)
+    font-size 16px
+    margin-bottom 42px
+
+  @media (min-width xl)
+    font-size 26px
+    margin-bottom 76px
+
+.tariff-options
+  flex-grow 1
+  font-family fontSemiBold
+  font-size 12px
+  line-height 1.5
+  margin-bottom 34px
+  list-style none
+  li
+    display flex
+    margin-bottom 8px
+    &::before
+      content ''
+      background url("../assets/images/check.svg") no-repeat center
+      width 10px
+      background-size contain
+      margin-right 10px
+
+  @media (min-width md)
+    font-size 10px
+    margin-bottom 30px
+    li
+      margin-bottom 15px
+
+  @media (min-width xl)
+    font-size 16px
+    margin-bottom 46px
+    li
+      &::before
+        width 14px
+        margin-right 13px
+
+.tariff-price-wrapper
+  display flex
+  align-items center
+  height 2em
+  margin-bottom 20px
+
+  @media (min-width xl)
+    margin-bottom 38px
+
+.tariff-text
+  font-family fontRegular
+  font-size 13px
+  line-height 1
+  margin 0 0.5em 0 20px
+
+  @media (min-width md)
+    font-size 12px
+
+  @media (min-width xl)
+    font-size 18px
+    margin 0 0.5em 0 28px
+
+.tariff-price
+  font-family fontRegular
+  font-size 20px
+  line-height 1
+  letter-spacing 0.02em
+  color colorRed
+  span
+    font-size 18px
+
+  @media (min-width md)
+    font-size 18px
+    span
+      font-size 16px
+
+  @media (min-width xl)
+    font-size 22px
+    span
+      font-size 20px
+
+span.rouble-sign
+  font-family fontRouble
+  font-size 1em
+
+.swiper-tariffs
+  padding 40px 15px
+  margin -30px -15px -40px
+  .swiper-slide
+    display flex
+    justify-content center
+
+  @media (min-width xl)
+    padding 66px 0 66px
+    margin 0 0 -66px
+    .swiper-slide-active
+    .swiper-slide-duplicate-prev
+      opacity 0.4
+
+//** App **//
+.section-app
+  padding-top 36px
+
+  @media (min-width md)
+    padding-top 45px
+
+  @media (min-width xl)
+    padding-top 75px
+
+.swiper-app
+  .swiper-slide
+    display flex
+    flex-direction column
+    justify-content space-between
+    height 440px
+    background colorWhite
+
+  @media (min-width md)
+    display none
+
+.app-nav-prev
+.app-nav-next
+  position absolute
+  top calc(50% - 7px)
+  z-index 100
+  background url("../assets/images/arrow-grey.svg") no-repeat center
+  width 8px
+  height 15px
+  background-size contain
+
+.app-nav-prev
+  transform rotate(180deg)
+  left 0
+
+.app-nav-next
+  right 0
+
+.app
+  display none
+
+  @media (min-width md)
+    display flex
+    align-items center
+
+.app-img-container
+  max-width 65%
+  margin 0 auto
+
+  @media (min-width xl)
+    max-width 654px
+
+.app-img
+
+  @media (min-width md)
+    display none
+    &:first-of-type
+      display inline-block
+
+.app-mobile-option
+  background colorLight
+  padding 15px 20px
+  border-radius 22px
+
+.app-mobile-title
+  font-family fontBold
+  font-size 14px
+  line-height 1.2
+  color colorRed
+  margin-bottom 6px
+
+.app-mobile-text
+  font-family fontMedium
+  font-size 12px
+  line-height 1.8
+
+.app-option
+  background colorLight
+  padding 15px 20px
+  border-radius 22px
+  cursor pointer
+  &+.app-option
+    margin-top 20px
+  &:hover
+  &.active
+    background colorRed
+    .app-title,
+    .app-text
+      color colorWhite
+
+  @media (min-width md)
+    width 300px
+    padding 15px 10px 15px 20px
+
+  @media (min-width xl)
+    width 500px
+    padding 24px 40px
+    border-radius 42px
+    &+.app-option
+      margin-top 33px
+
+.app-title
+  font-family fontBold
+  font-size 14px
+  line-height 1.2
+  color colorRed
+  margin-bottom 6px
+
+  @media (min-width md)
+    font-size 12px
+
+  @media (min-width xl)
+    font-size 20px
+
+.app-text
+  font-family fontMedium
+  font-size 12px
+  line-height 1.8
+
+  @media (min-width md)
+    font-size 11px
+    line-height 1.6
+
+  @media (min-width xl)
+    font-size 17px
+    line-height 1.4
+
+//** Callback form **//
+.section-callback
+  background colorBlue
+  padding 68px 0
+  .section-title
+    color colorWhite
+
+  @media (min-width md)
+    padding 30px 0 60px
+
+  @media (min-width xl)
+    padding 50px 0 70px
+
+.callback-text
+  font-family fontMedium
+  font-size 14px
+  line-height 1.7
+  color colorWhite
+  text-align center
+  opacity 0.7
+  margin 0 auto 25px
+
+  @media (min-width md)
+    max-width 450px
+    font-family fontRegular
+    opacity 0.4
+    line-height 1.2
+
+  @media (min-width xl)
+    max-width 50%
+    font-size 17px
+    margin 0 auto 40px
+
+.form-row
+  display flex
+  align-items center
+  justify-content center
+
+.form-control
+  width 229px
+  height 31px
+  padding 6px 10px
+  font-family fontAlt
+  font-size 14px
+  color colorWhite
+  background-color transparent
+  border 1px solid colorWhite
+  border-radius 0
+  transition none
+  margin-bottom 28px
+  &::placeholder
+    color rgba(255, 255, 255, 0.3)
+  &:focus
+    color colorWhite
+    background-color transparent
+    border-color colorWhite
+    box-shadow none
+
+  @media (min-width md)
+    width 165px
+    height 26px
+    margin 0 15px 0 0
+    &::placeholder
+      font-size 12px
+
+  @media (min-width xl)
+    width 300px
+    height 48px
+    padding 12px 15px
+    margin 0 20px 0 0
+    font-size 17px
+    &::placeholder
+      font-size 17px
+
+.btn-submit
+
+  @media (min-width md)
+    width 173px
+    height 26px
+
+  @media (min-width xl)
+    width 300px
+    height 48px
+
+//** Functions **//
+.section-functions
+  padding 30px 0
+
+  @media (min-width md)
+    padding 42px 0 63px
+
+  @media (min-width xl)
+    padding 90px 0 95px
+
+.functions
+
+  @media (min-width md)
+    margin-top 60px
+
+  @media (min-width xl)
+    margin-top 90px
+
+.functions-right
+
+  @media (min-width xl)
+    padding-left 56px
+
+.function
+  display flex
+  align-items center
+  font-family fontRegular
+  font-size 16px
+  line-height 1.2
+  color colorGrey
+  cursor pointer
+  margin-bottom 14px
+  img
+    width 50px
+    height 50px
+    margin-right 15px
+    filter grayscale(1)
+  &:hover
+  &:focus
+    color colorRed
+    img
+      filter grayscale(0)
+
+  @media (min-width md)
+      font-size 14px
+      margin-bottom 8px
+    img
+      width 42px
+      height 42px
+      margin-right 15px
+
+  @media (min-width xl)
+    font-size 24px
+    margin-bottom 18px
+    img
+      width 80px
+      height 80px
+      margin-right 25px
+
+//** Footer **//
+footer
+.footer
+  background-color colorGrey
+  padding 18px 0 52px
+
+  @media (min-width xl)
+    padding 20px 0 67px
+
+.footer-top
+
+  @media (min-width xl)
+    border-bottom 1px solid #6a6d76
+    padding-bottom 18px
+    margin-bottom 36px
+    border-width 3px
+
+.footer-container
+  display flex
+  flex-direction column
+  align-items center
+
+  @media (min-width xl)
+    flex-direction row
+    justify-content space-between
+    margin-bottom 100px
+
+.logo-footer
+  width 258px
+
+  @media (min-width xl)
+    width 170px
+
+.footer-right
+  display flex
+  flex-direction column
+  align-items center
+  margin-top 25px
+
+  @media (min-width xl)
+    flex-direction row
+    margin-top 0
+
+.footer-phone
+  font-family fontMedium
+  font-size 18px
+  color colorWhite
+  opacity 0.7
+  &:hover
+  &:focus
+    color colorWhite
+    opacity 1
+
+  @media (min-width xl)
+    font-size 20px
+
+.footer-wrapper
+  display flex
+  align-items center
+  justify-content center
+  margin-bottom 10px
+
+  @media (min-width xl)
+    margin-bottom 0
+
+.footer-phone-alt
+  display none
+
+  @media (min-width xl)
+    font-family fontAlt
+    font-size 14px
+    color colorWhite
+    opacity 0.5
+    &:hover
+    &:focus
+      color colorWhite
+      opacity 1
+
+  @media (min-width xl)
+    font-size 18px
+    margin-right 50px
+
+.footer-text
+  font-family fontAlt
+  font-size 12px
+  color colorWhite
+  opacity 0.4
+  text-align center
+
+.social-container
+  text-align center
+  margin 20px 0
+
+  @media (min-width xl)
+    margin 0 0 0 40px
+
+.link-social
+  width 45px
+  height 45px
+  opacity 0.7
+  img
+    width 100%
+  &+.link-social
+    margin-left 10px
+  &:hover
+  &:focus
+    opacity 1
+
+  @media (min-width xl)
+    width 30px
+    height 30px
+
+.footer-bottom
+
+  @media (min-width md)
+    display flex
+    align-items center
+    justify-content space-between
+
+.menu
+  display none
+  font-family fontRegular
+  font-size 14px
+  line-height 1.75
+  color #9d9e9f
+  li a
+    &:hover
+    &:focus
+      color colorWhite
+
+  @media (min-width xl)
+    display block
+    font-size 16px
+
+.menu-featured
+  color colorWhite
+  li a
+    &:hover
+    &:focus
+      font-family fontBold
